@@ -1,42 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agenda tu cita</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Limpieza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .section:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service {
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        .service img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <h1>Agendar cita</h1>
-  
-  <label for="hora">Selecciona una hora:</label>
-  <select id="hora">
-    <option value="15:00">3:00 PM</option>
-    <option value="16:00">4:00 PM</option>
-    <option value="17:00">5:00 PM</option>
-    <option value="18:00">6:00 PM</option>
-    <option value="19:00">7:00 PM</option>
-    <option value="20:00">8:00 PM</option>
-  </select>
-  
-  <div id="form-container" style="display:none;">
-    <h2>Ingresa tus datos</h2>
-    <form id="appointment-form">
-      <label for="name">Nombre:</label><br>
-      <input type="text" id="name" required><br><br>
-      
-      <label for="phone">Número de teléfono:</label><br>
-      <input type="tel" id="phone" required><br><br>
-      
-      <label for="email">Correo electrónico:</label><br>
-      <input type="email" id="email" required><br><br>
-      
-      <button type="submit">Agendar cita</button>
-    </form>
-  </div>
-
-  <div id="availability-msg" style="display:none;"></div>
-
-  <script src="scripts.js"></script>
+    <header>
+        <h1>Servicios Profesionales de Limpieza</h1>
+        <p>¡Hacemos brillar tus espacios!</p>
+    </header>
+    <nav>
+        <a href="#services">Servicios</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="hero">
+        <h1>Tu hogar limpio, tu mente tranquila</h1>
+    </div>
+    <section id="services" class="section">
+        <h2>Nuestros Servicios</h2>
+        <div class="services">
+            <div class="service">
+                <img src="https://via.placeholder.com/300" alt="Limpieza de hogares">
+                <h3>Limpieza de Hogares</h3>
+                <p>Mantenemos tu casa impecable para que disfrutes de un espacio saludable y confortable.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300" alt="Limpieza de oficinas">
+                <h3>Limpieza de Oficinas</h3>
+                <p>Entornos laborales limpios que inspiran productividad y profesionalismo.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300" alt="Limpieza profunda">
+                <h3>Limpieza Profunda</h3>
+                <p>Eliminamos hasta la suciedad más persistente en todos los rincones de tu espacio.</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="section">
+        <h2>Testimonios de Clientes</h2>
+        <p>"Contraté su servicio de limpieza para mi oficina, y estoy encantado con los resultados. ¡Excelente atención!" - <strong>Juan Pérez</strong></p>
+        <p>"Mi hogar nunca se había visto tan limpio. Los recomiendo al 100%." - <strong>María López</strong></p>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas o deseas contratar nuestros servicios? ¡Escríbenos!</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo" required>
+            <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Servicios de Limpieza. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
