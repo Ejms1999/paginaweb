@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda tu cita</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Agendar cita</h1>
+  
+  <label for="hora">Selecciona una hora:</label>
+  <select id="hora">
+    <option value="15:00">3:00 PM</option>
+    <option value="16:00">4:00 PM</option>
+    <option value="17:00">5:00 PM</option>
+    <option value="18:00">6:00 PM</option>
+    <option value="19:00">7:00 PM</option>
+    <option value="20:00">8:00 PM</option>
+  </select>
+  
+  <div id="form-container" style="display:none;">
+    <h2>Ingresa tus datos</h2>
+    <form id="appointment-form">
+      <label for="name">Nombre:</label><br>
+      <input type="text" id="name" required><br><br>
+      
+      <label for="phone">Número de teléfono:</label><br>
+      <input type="tel" id="phone" required><br><br>
+      
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" required><br><br>
+      
+      <button type="submit">Agendar cita</button>
+    </form>
+  </div>
+
+  <div id="availability-msg" style="display:none;"></div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
